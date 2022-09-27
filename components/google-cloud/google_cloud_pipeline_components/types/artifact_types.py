@@ -20,9 +20,25 @@ import json
 # The artifact property key for the resource name
 ARTIFACT_PROPERTY_KEY_RESOURCE_NAME = 'resourceName'
 
-class VertexModel(dsl.Artifact):
+
+class GoogleArtifact(dsl.Artifact):
+
+  @classmethod
+  def set_type(cls, type_name: str):
+    """Set the artifact type, depending on KFP version.
+
+    Args:
+      type_name: The type name.
+    """
+    if hasattr(dsl.Artifact, 'schema_title'):
+      cls.schema_title = type_name
+      cls.schema_version = '0.0.1'
+    else:
+      cls.TYPE_NAME = type_name
+
+class VertexModel(GoogleArtifact):
   """An artifact representing a Vertex Model."""
-  TYPE_NAME = 'google.VertexModel'
+  GoogleArtifact.set_type('google.VertexModel')
 
   def __init__(self, name: str, uri: str, model_resource_name: str):
     """Args:
@@ -44,9 +60,9 @@ class VertexModel(dsl.Artifact):
         metadata={ARTIFACT_PROPERTY_KEY_RESOURCE_NAME: model_resource_name})
 
 
-class VertexEndpoint(dsl.Artifact):
+class VertexEndpoint(GoogleArtifact):
   """An artifact representing a Vertex Endpoint."""
-  TYPE_NAME = 'google.VertexEndpoint'
+  GoogleArtifact.set_type('google.VertexEndpoint')
 
   def __init__(self, name: str, uri: str, endpoint_resource_name: str):
     """Args:
@@ -68,9 +84,9 @@ class VertexEndpoint(dsl.Artifact):
         metadata={ARTIFACT_PROPERTY_KEY_RESOURCE_NAME: endpoint_resource_name})
 
 
-class VertexBatchPredictionJob(dsl.Artifact):
+class VertexBatchPredictionJob(GoogleArtifact):
   """An artifact representing a Vertex BatchPredictionJob."""
-  TYPE_NAME = 'google.VertexBatchPredictionJob'
+  GoogleArtifact.set_type('google.VertexBatchPredictionJob')
 
   def __init__(self,
                name: str,
@@ -115,9 +131,9 @@ class VertexBatchPredictionJob(dsl.Artifact):
         })
 
 
-class VertexDataset(dsl.Artifact):
+class VertexDataset(GoogleArtifact):
   """An artifact representing a Vertex Dataset."""
-  TYPE_NAME = 'google.VertexDataset'
+  GoogleArtifact.set_type('google.VertexDataset')
 
   def __init__(self, name: str, uri: str, dataset_resource_name: str):
     """Args:
@@ -139,9 +155,9 @@ class VertexDataset(dsl.Artifact):
         metadata={ARTIFACT_PROPERTY_KEY_RESOURCE_NAME: dataset_resource_name})
 
 
-class BQMLModel(dsl.Artifact):
+class BQMLModel(GoogleArtifact):
   """An artifact representing a BQML Model."""
-  TYPE_NAME = 'google.BQMLModel'
+  GoogleArtifact.set_type('google.BQMLModel')
 
   def __init__(self, name: str, project_id: str, dataset_id: str,
                model_id: str):
@@ -165,9 +181,9 @@ class BQMLModel(dsl.Artifact):
         })
 
 
-class BQTable(dsl.Artifact):
+class BQTable(GoogleArtifact):
   """An artifact representing a BQ Table."""
-  TYPE_NAME = 'google.BQTable'
+  GoogleArtifact.set_type('google.BQTable')
 
   def __init__(self, name: str, project_id: str, dataset_id: str,
                table_id: str):
@@ -191,9 +207,9 @@ class BQTable(dsl.Artifact):
         })
 
 
-class UnmanagedContainerModel(dsl.Artifact):
+class UnmanagedContainerModel(GoogleArtifact):
   """An artifact representing an unmanaged container model."""
-  TYPE_NAME = 'google.UnmanagedContainerModel'
+  GoogleArtifact.set_type('google.UnmanagedContainerModel')
 
   def __init__(self, predict_schemata: Dict, container_spec: Dict):
     """Args:
