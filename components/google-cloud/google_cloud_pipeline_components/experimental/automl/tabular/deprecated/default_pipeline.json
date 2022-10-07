@@ -6489,9 +6489,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-ensemble": {
@@ -6512,9 +6512,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-ensemble-2": {
@@ -6535,9 +6535,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-finalizer": {
@@ -6558,9 +6558,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-infra-validator": {
@@ -6607,9 +6607,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-stage-1-tuner-2": {
@@ -6630,9 +6630,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-transform": {
@@ -6653,9 +6653,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-automl-tabular-transform-2": {
@@ -6676,9 +6676,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-bool-identity": {
@@ -6806,7 +6806,7 @@
               "-m",
               "google_cloud_pipeline_components.container.v1.batch_prediction_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-batch-predict-2": {
@@ -6831,7 +6831,7 @@
               "-m",
               "google_cloud_pipeline_components.container.v1.batch_prediction_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-batch-predict-3": {
@@ -6856,7 +6856,7 @@
               "-m",
               "google_cloud_pipeline_components.container.v1.batch_prediction_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-batch-predict-4": {
@@ -6881,7 +6881,7 @@
               "-m",
               "google_cloud_pipeline_components.container.v1.batch_prediction_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-evaluation": {
@@ -7226,7 +7226,7 @@
               "-m",
               "google_cloud_pipeline_components.container.experimental.evaluation.import_model_evaluation"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-evaluation-import-2": {
@@ -7263,7 +7263,7 @@
               "-m",
               "google_cloud_pipeline_components.container.experimental.evaluation.import_model_evaluation"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-model-upload": {
@@ -7410,9 +7410,9 @@
               "python3",
               "-u",
               "-m",
-              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+              "google_cloud_pipeline_components.container.v1.custom_job.launcher"
             ],
-            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.21"
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.24"
           }
         },
         "exec-write-bp-result-path": {
